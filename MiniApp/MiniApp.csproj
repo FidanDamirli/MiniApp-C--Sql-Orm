@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="DataAccess\" />
+    <None Remove="BusinessLogic\" />
+    <None Remove="BusinessLogic\Interface\" />
+    <None Remove="BusinessLogic\Implements\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataAccess\" />
+    <Folder Include="BusinessLogic\" />
+    <Folder Include="BusinessLogic\Interface\" />
+    <Folder Include="BusinessLogic\Implements\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.36" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.36">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.36" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.36">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+</Project>
